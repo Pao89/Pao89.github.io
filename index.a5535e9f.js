@@ -690,7 +690,7 @@ function parseRepoLink(repo) {
     return `<a href="${repo.url}" target="_blank" class="list-group-item list-group-item-action">${repo.name} <div>${parseRepoLanguages(repo.languages)}</div></a>`;
 }
 $(window).on("resize", (0, _lodash.debounce)(checkPosition, 100));
-$(".hero-intro").on("mouseover touchstart touchend", (0, _lodash.debounce)(heroSectionAnimate, 20));
+$(".hero-intro").on("mouseover touchstart", (0, _lodash.debounce)(heroSectionAnimate, 20));
 $(window).on("scroll", (0, _lodash.debounce)(updateBackTopButton, 1000));
 $('a[href^="#"]').on("click", function() {
     var href = $.attr(this, "href");
